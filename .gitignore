@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+*.pyc
+
+# Keep the GitHub Pages-only copy out of the backend repository.
+static/

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe Share</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Community kitchen</p>
+        <h1>Recipe Share</h1>
+      </div>
+      <nav class="top-nav" aria-label="Primary">
+        <a class="nav-link active" href="/">Browse</a>
+        <a class="nav-button" href="/submit">Share recipe</a>
+      </nav>
+    </header>
+
+    <main class="browse-layout">
+      <section class="recipes-section">
+        <div class="section-heading">
+          <div>
+            <h2>Browse recipes</h2>
+            <form class="search-panel" id="filterForm">
+              <input id="searchInput" type="search" placeholder="Search recipes, ingredients, or steps">
+              <select id="categoryFilter" aria-label="Filter by category">
+                <option value="">All categories</option>
+              </select>
+              <button type="submit">Search</button>
+            </form>
+          </div>
+          <span id="recipeCount">0 recipes</span>
+        </div>
+        <div class="recipe-grid" id="recipeGrid"></div>
+      </section>
+    </main>
+
+    <template id="recipeTemplate">
+      <article class="recipe-card">
+        <img class="recipe-image" alt="">
+        <div class="recipe-content">
+          <div class="recipe-topline">
+            <span class="category"></span>
+            <span class="rating"></span>
+          </div>
+          <h3></h3>
+          <div class="recipe-columns">
+            <section>
+              <h4>Ingredients</h4>
+              <p class="ingredients"></p>
+            </section>
+            <section>
+              <h4>Instructions</h4>
+              <p class="instructions"></p>
+            </section>
+          </div>
+          <form class="rating-form">
+            <select name="rating" aria-label="Rating">
+              <option value="5">5 stars</option>
+              <option value="4">4 stars</option>
+              <option value="3">3 stars</option>
+              <option value="2">2 stars</option>
+              <option value="1">1 star</option>
+            </select>
+            <button type="submit">Rate</button>
+          </form>
+        </div>
+      </article>
+    </template>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
